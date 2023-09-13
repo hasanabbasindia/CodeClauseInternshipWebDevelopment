@@ -1,0 +1,229 @@
+
+
+.App {
+  text-align: center;
+  height: 100vh;
+  /* overflow-y: hidden; */
+}
+
+.app-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+body{
+  background-color: rgb(226, 246, 246);
+ 
+}
+
+
+@media (max-width:700px) {
+
+  .component{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .component>div{
+    width: 100% !important;
+    height: 85vh !important;
+  }
+  .component>div button{
+    margin: 10px;
+  }
+  .component>div .inner button{
+    margin: 10px;
+    width: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    color: white;
+    background-color: transparent;
+    border: none;
+  }
+  .component>div button .delete{
+    display: none;
+  }
+  .component>div button svg{
+    font-size: 40px;
+  }
+}
+
+.header span{
+  color: yellow;
+}
+@keyframes animate {
+  0%{
+    transform: scale(0) translateY(0) rotate(0);
+    opacity: 1;
+  }
+  100%{
+    transform: scale(1.5) translateY(-40px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.App {
+  position: absolute;
+  text-align: center;
+  background-color: black;
+  width: 100%;
+  height: 100vh;
+}
+.wrapper div{
+  width: 60px;
+  height: 60px;
+  border: 2px solid white;
+  position: absolute;
+  background: transparent;
+  animation: animate 5s linear infinite;
+
+}
+.wrapper div:nth-child(1){
+  top: 0%;
+  left: 12%;
+  animation: animate 5s linear infinite;
+}
+.wrapper div:nth-child(2){
+  top: 25%;
+  left: 2%;
+  animation: animate 5s linear infinite;
+}
+.wrapper div:nth-child(3){
+  top: 50%;
+  left: 4%;
+  animation: animate 5s linear infinite;
+}
+.wrapper div:nth-child(4){
+  top: 65%;
+  left: 2%;
+  animation: animate 5s linear infinite;
+}
+.wrapper div:nth-child(5){
+  top: 85%;
+  left: 12%;
+  animation: animate 5s linear infinite;
+}
+.wrapper div:nth-child(6){
+  top: 0%;
+  left: 80%;
+  animation: animate 5s linear infinite;
+}
+.wrapper div:nth-child(7){
+  top: 50%;
+  right: 2%;
+  animation: animate 5s linear infinite;
+}
+.wrapper div:nth-child(8){
+  top: 25%;
+  right: 4%;
+  animation: animate 5s linear infinite;
+}
+.wrapper div:nth-child(9){
+  top: 75%;
+  right: 2%;
+  animation: animate 5s linear infinite;
+}
+.wrapper div:nth-child(10){
+  top: 85%;
+  right: 12%;
+  animation: animate 5s linear infinite;
+}
+.wrapper div:nth-child(11){
+  top: 90%;
+  right: 12%;
+  animation: animate 5s linear infinite;
+}
+
+.component{
+  z-index: 999;
+}
+
+
+.component {
+  --border-width: 3px;
+  position: relative;
+  font-family: Lato, sans-serif;
+  color: white;
+  background: #222;
+  border-radius: var(--border-width);}
+
+  .component::after {
+    position: absolute;
+    content: "";
+    top: calc(-1 * var(--border-width));
+    left: calc(-1 * var(--border-width));
+    z-index: -1;
+    width: calc(100% + var(--border-width) * 2);
+    height: calc(100% + var(--border-width) * 2);
+    background: linear-gradient(
+      60deg,
+      hsl(224, 85%, 66%),
+      hsl(269, 85%, 66%),
+      hsl(314, 85%, 66%),
+      hsl(359, 85%, 66%),
+      hsl(44, 85%, 66%),
+      hsl(89, 85%, 66%),
+      hsl(134, 85%, 66%),
+      hsl(179, 85%, 66%)
+    );
+    background-size: 300% 300%;
+    background-position: 0 50%;
+    border-radius: calc(2 * var(--border-width));
+    animation: moveGradient 4s alternate infinite;
+  }
+
+
+@keyframes moveGradient {
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.deletebutton{
+  background-color: aqua;
+  color: red;
+}
+.deletebutton {
+  --border-width: 15px;
+
+  position: relative;
+  color: white;
+  background: #222;
+  border-radius: var(--border-width);}
+
+  .deletebutton::after {
+    position: absolute;
+    content: "";
+    top: calc(-1 * var(--border-width));
+    left: calc(-1 * var(--border-width));
+    z-index: -1;
+    width: calc(100% + var(--border-width) * 2);
+    height: calc(100% + var(--border-width) * 2);
+    background: linear-gradient(
+      90deg,
+      hsl(224, 85%, 66%),
+      hsl(269, 85%, 66%),
+      hsl(314, 85%, 66%),
+      hsl(359, 85%, 66%),
+      hsl(44, 85%, 66%),
+      hsl(89, 85%, 66%),
+      hsl(134, 85%, 66%),
+      hsl(179, 85%, 66%)
+    );
+    background-size: 300% 300%;
+    background-position: 0 50%;
+    border-radius: calc(2 * var(--border-width));
+    animation: moveGradient 4s alternate infinite;
+  }
+
+@keyframes moveGradient {
+  50% {
+    background-position: 100% 50%;
+  }
+}
